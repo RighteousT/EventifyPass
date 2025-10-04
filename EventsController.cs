@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using EventifyPass.Data;
+﻿using EventifyPass.Data;
 using EventifyPass.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace EventifyPass.Controllers
 {
@@ -21,7 +22,12 @@ namespace EventifyPass.Controllers
             return @event == null ? NotFound() : View(@event);
         }
 
-        public IActionResult Create() => View();
+        public IActionResult Create()
+        {
+            ViewBag.Categories = new SelectList(_context.Categories, "CategoryId", "Name");
+            return View();
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> Create(Event @event)
