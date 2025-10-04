@@ -2,17 +2,11 @@
 
 namespace EventifyPass.Controllers
 {
-    public class HomeController : Controller
+    public class TicketsController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Contact()
-        {
-            return View();
-        }
-
     }
 }

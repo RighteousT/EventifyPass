@@ -1,5 +1,49 @@
-﻿@*
-  Temporary homepage
-*@
-<h1>EventifyPass</h1>
-<p>More upcoming Events</p>
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center hero">
+    <h1 class="display-4 fw-bold">Find & Book Your Next Event</h1>
+    <p><a class="btn btn-primary btn-lg mt-3" asp-controller="Events" asp-action="Index">Explore More Events</a></p>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Upcoming Events</h2>
+    <div class="row">
+        <!-- Event 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="~/images/Concert.jpg" class="card-img-top" alt="Concert">
+                <div class="card-body">
+                    <h5 class="card-title">Imagine Dragons Tour Concert</h5>
+                    <p class="card-text">May 15 | San Diego</p>
+                    <a href="#" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="~/images/Business.jpg" class="card-img-top" alt="Business">
+                <div class="card-body">
+                    <h5 class="card-title">Business Conference</h5>
+                    <p class="card-text">July 4 | Chicago</p>
+                    <a href="#" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="~/images/Motorsports.jpg" class="card-img-top" alt="Motorsports">
+                <div class="card-body">
+                    <h5 class="card-title">Motorsports Season</h5>
+                    <p class="card-text">August 19| California</p>
+                    <a href="#" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
