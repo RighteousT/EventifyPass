@@ -85,8 +85,14 @@ namespace EventifyPass.Migrations
                     b.Property<TimeSpan>("EventTime")
                         .HasColumnType("time");
 
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Location")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Owner")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")

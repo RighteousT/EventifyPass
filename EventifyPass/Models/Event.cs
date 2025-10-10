@@ -11,12 +11,21 @@ namespace EventifyPass.Models
         public TimeSpan EventTime { get; set; }
         public string Location { get; set; } = string.Empty;
 
-        // Foreign Key
+        
+        public string? Owner { get; set; }
+
+       
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        
+
+        // Foreign Key to Category
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
 
-        // Metadata
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
+    
+        // Event Image upload 
+        public string? ImagePath { get; set; }
 
     }
 }
